@@ -1,0 +1,113 @@
+/*
+ * Style Sheet for the File Manager plugin for jWYSIWYG
+ * 
+ * Yotam Bar-On, 2011
+ * 
+ * Uses the Silk Icon Set: http://www.famfamfam.com/lab/icons/silk/
+ * The Silk Icon Set is released under CC-3.0/2.5  and was created by FAMFAMFAM.
+ */
+ 
+div.wysiwyg ul.toolbar li.fileManager, div.wysiwyg-fileManager { background: url('../../../data_uploads/product/editor/plugins/fileManager/icon.png'); }
+div.wysiwyg-fileManager { width:16px; height:16px; cursor: pointer; cursor: hand; }
+
+
+.wysiwyg-files-wrapper { padding:10px; }
+
+#wysiwyg-files-list-wrapper { min-height:50px; max-height:400px; overflow:auto; }
+* html #wysiwyg-files-list-wrapper { height: 600px; }
+
+.wysiwyg-files-ajax { background: url(../../../data_uploads/product/editor/ajax-loader.gif) left top no-repeat; }
+
+.wysiwyg-files-file-preview { position:absolute; background-position:center center; background-color:#fff; border:solid 1px; padding:2px; min-width:16px; min-height:16px; max-width:300px; z-index:200000; }
+* html .wysiwyg-files-file-preview { width:90px; }
+
+/* CSS3 for fun */
+.wysiwyg-files-wrapper li {
+	-moz-transition: all 0.5s ease-out;  /* FF4+ */
+	-o-transition: all 0.5s ease-out;  /* Opera 10.5+ */
+	-webkit-transition: all 0.5s ease-out;  /* Saf3.2+, Chrome */
+	-ms-transition: all 0.5s ease-out;  /* IE10? */
+	 transition: all 0.5s ease-out;
+}
+
+.wysiwyg-files-wrapper ul { padding:0px; margin:0px; }
+.wysiwyg-files-wrapper li { list-style:none; padding:0px; padding-left:20px; margin: 2px; }
+.wysiwyg-files-wrapper li a { display:inline-block; text-decoration:none; cursor: pointer; cursor: hand; }
+.wysiwyg-files-textfield { width:250px; border:solid 1px !important; }
+
+.wysiwyg-files-wrapper li.wysiwyg-files-hover { background-color: #BDF !important; }
+.wysiwyg-files-wrapper li.wysiwyg-files-dir { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/directory.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-dir-expanded { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/folder_open.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-file { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/file.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-dir-prev { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/prev-directory.png) left top no-repeat; }
+
+.wysiwyg-files-wrapper li .wysiwyg-files-action { float:right; width:16px; height:16px; margin:2px; cursor: pointer; cursor: hand; }
+.wysiwyg-files-wrapper li .wysiwyg-files-action-rename { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/rename.png) left top no-repeat; }
+.wysiwyg-files-wrapper li .wysiwyg-files-action-remove { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/remove.png) left top no-repeat; }
+.wysiwyg-files-wrapper .wysiwyg-files-action-upload, .wysiwyg-files-wrapper .wysiwyg-files-action-mkdir { float:right; width:16px; height:16px; margin:2px; cursor: pointer; cursor: hand; }
+.wysiwyg-files-wrapper .wysiwyg-files-action-upload { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/upload.png); }
+.wysiwyg-files-wrapper .wysiwyg-files-action-mkdir { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/mkdir.png);}
+
+/*
+ * Below is the list of file-types classes.
+ */
+ 
+ /* This REALLY needs to become a sprite */
+.wysiwyg-files-wrapper li.wysiwyg-files-3gp { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-afp { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-afpa { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-asp { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-aspx { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-avi { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-bat { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/application.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-bmp { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-c { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-cfm { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-cgi { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-com { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/application.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-cpp { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-css { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/css.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-doc { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/doc.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-exe { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/application.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-gif { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-fla { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/flash.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-h { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-htm { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/html.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-html { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/html.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-jar { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/java.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-jpg { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-jpeg { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-js { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/script.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-lasso { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-log { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/txt.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-m4p { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/music.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-mov { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-mp3 { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/music.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-mp4 { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-mpg { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-mpeg { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-ogg { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/music.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-pcx { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-pdf { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/pdf.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-php { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/php.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-png { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-ppt { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/ppt.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-psd { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/psd.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-pl { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/script.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-py { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/script.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-rb { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/ruby.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-rbx { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/ruby.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-rhtml { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/ruby.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-rpm { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/linux.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-ruby { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/ruby.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-sql { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/db.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-swf { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/flash.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-tif { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-tiff { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/picture.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-txt { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/txt.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-vb { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-wav { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/music.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-wmv { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/film.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-xls { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/xls.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-xml { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/code.png) left top no-repeat; }
+.wysiwyg-files-wrapper li.wysiwyg-files-zip { background: url(../../../data_uploads/product/editor/plugins/fileManager/images/zip.png) left top no-repeat; }

@@ -1,0 +1,1 @@
+<div id="footer">Nettina &copy;Copyright 2011. All rights reserved</div><!--End footer-->

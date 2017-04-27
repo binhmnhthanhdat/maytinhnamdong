@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>Jasmine Test Runner - jWYSIWYG</title>
+<!-- jasmine -->
+<link rel="stylesheet" type="text/css" href="../../../data_uploads/product/editor/help/lib/jasmine/jasmine.css"/>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/lib/jasmine/jasmine.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/lib/jasmine/jasmine-html.js"></script>
+<!-- wysiwyg -->
+<link rel="stylesheet" type="text/css" href="../../../data_uploads/product/editor/help/lib/blueprint/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="../../../data_uploads/product/editor/help/lib/blueprint/print.css" media="print" />
+<!--[if lt IE 8]><link rel="stylesheet" href="../lib/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+<link rel="stylesheet" href="../../../data_uploads/product/editor/jquery.wysiwyg.css" type="text/css"/>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/lib/jquery.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/plugins/wysiwyg.i18n.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/plugins/wysiwyg.rmFormat.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/i18n/lang.fr.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/i18n/lang.ru.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/controls/wysiwyg.image.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/controls/wysiwyg.link.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/controls/wysiwyg.table.js"></script>
+<!-- include spec files here... -->
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/helper.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/jwysiwyg.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/functions/insertHtml.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/controls/html.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/plugins.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/plugins/i18n.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/plugins/rmFormat.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/154.spec.js"></script>
+<script type="text/javascript" src="../../../data_uploads/product/editor/help/tests/jasmine/159.spec.js"></script>
+</head>
+<body><div class="container">
+
+<script type="text/javascript">
+$(document).ready(function () {
+	jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+	jasmine.getEnv().execute();
+});
+</script>
+
+<div style="overflow: scroll; width: 100%; height: 100px;">
+<textarea id="id1"></textarea>
+<textarea id="id2"></textarea>
+</div>
+
+</div></body>
+</html>
